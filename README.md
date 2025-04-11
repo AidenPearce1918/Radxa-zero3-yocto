@@ -1,43 +1,32 @@
-# Radxa Zero 3W Yocto & Developer Docs
+## Radxa Zero 3W — Board Overview
 
-This repository contains in-depth documentation, build guides, and Yocto support for the **Radxa Zero 3W** SBC. It aims to provide a more organized and developer-friendly resource compared to fragmented or incomplete official docs.
+The **Radxa Zero 3W** is a compact, high-performance Single Board Computer (SBC) powered by the Rockchip RK3566 SoC. Designed for versatility, it caters to applications ranging from IoT devices to edge computing.
 
-> 📌 This is not a community wiki — it is a curated knowledgebase for developers working with the Radxa Zero 3W.
+### Key Features
 
----
+- **Processor**: Rockchip RK3566 Quad-core ARM Cortex-A55 @ 1.6GHz
+- **GPU**: Mali-G52 2EE
+- **Memory**: 1GB / 2GB / 4GB / 8GB LPDDR4
+- **Storage Options**:
+  - microSD card slot
+  - Optional eMMC module (up to 64GB)
+- **Wireless Connectivity**:
+  - Wi-Fi 6 (802.11ax)
+  - Bluetooth 5.4
+- **Interfaces**:
+  - USB 3.0 Host (Type-C)
+  - USB 2.0 OTG (Type-C)
+  - Micro-HDMI (up to 1080p60 output)
+  - 40-pin GPIO header (Raspberry Pi compatible layout)
+  - UART debug header
+  - MIPI CSI camera interface
+- **Power Supply**: 5V/2A via USB Type-C
+- **Dimensions**: 65mm x 30mm
 
-## 📘 What's Included?
+### Labeled Board Diagram
 
-- 📐 **Hardware overview** — complete specs and pinouts
-- 🔌 **Serial/UART setup** via FTDI
-- 📦 **Bootable image flashing** and first boot instructions
-- 📡 **WiFi setup for AIC8800** (driver patching and usage)
-- 🧑‍💻 **Yocto build integration** and layer usage
-- ⚙️ **Manual network setup**, system config, and troubleshooting
-- 🧰 Practical hacks to get things working when standard methods fail
+To assist with hardware interfacing and development, refer to the labeled diagram below highlighting the key components and interfaces of the Radxa Zero 3W:
 
----
+![Radxa Zero 3W Labeled Diagram](https://docs.radxa.com/en/zero/zero3/zero-3w-interface-overview.png)
 
-## 📂 Structure
-
-| Folder/File        | Description |
-|--------------------|-------------|
-| `docs/`            | Markdown-based documentation (hosted via GitHub Pages) |
-| `yocto-layers/`    | BitBake recipes and custom meta layers |
-| `images/`          | Reference board images and UART setup |
-| `README.md`        | This file |
-| `LICENSE`          | License terms (GPLv3) |
-
----
-
-## 📄 License
-
-This repository is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.  
-You are free to use, modify, and distribute the contents under the terms of this license, provided derivative works also remain open-source.
-
----
-
-## 🚀 Hosting the Docs
-
-The markdown documentation is designed to be hosted via GitHub Pages. You can visit the hosted site once it's enabled via:
-
+*Image Source: [Radxa Documentation](https://docs.radxa.com/en/zero/zero3)*
