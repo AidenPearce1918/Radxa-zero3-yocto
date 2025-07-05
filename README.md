@@ -34,18 +34,3 @@ To help you get started with hardware interfacing and development, refer to the 
 ![Radxa Zero 3W Labeled Diagram](https://docs.radxa.com/en/zero/zero3/zero-3w-interface-overview.png)
 
 *Image Source: [Radxa Documentation](https://docs.radxa.com/en/zero/zero3)*
-
----
-
-### 📥 Useful Resources & Downloads
-
-- [Radxa Zero 3W Documentation](https://docs.radxa.com/en/zero/zero3)
-- [Radxa Forum (Community Support)](https://forum.radxa.com/)
-- [Radxa GitHub (Firmware & Tools)](https://github.com/radxa)
-- [Armbian Images for Radxa Zero](https://www.armbian.com/radxa-zero/)
-- [Yocto Project Downloads](https://www.yoctoproject.org/downloads/)
-- [Balena Etcher (SD Card Flasher)](https://www.balena.io/etcher/)
-
----
-
-For a full setup guide, visit the [Radxa Zero 3W Yocto Guide Website](https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/).
