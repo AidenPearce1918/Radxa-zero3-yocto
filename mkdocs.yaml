@@ -91,10 +91,8 @@ extra:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/ui-elements.css
-
 extra_javascript:
   - javascripts/ui-interactive.js
-#  - javascripts/dark-toggle.js
 
 site_description: Official documentation for the Radxa Zero 3W single-board computer, including setup, hardware, software, and tutorials.
 site_author: Aiden Pearce
