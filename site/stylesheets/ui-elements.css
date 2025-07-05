@@ -1,0 +1,80 @@
+/* --- Toggle Switch UI Element --- */
+.toggle-switch {
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  background: #444;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background 0.2s;
+}
+.toggle-switch input {
+  display: none;
+}
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--md-accent-fg-color, #48bfe3);
+  border-radius: 50%;
+  transition: left 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.toggle-switch input:checked + .toggle-slider {
+  left: 26px;
+  background: var(--md-primary-fg-color, #5e60ce);
+}
+
+/* Optional: Add a subtle glow when active */
+.toggle-switch input:checked + .toggle-slider {
+  box-shadow: 0 0 8px 2px var(--md-primary-fg-color, #5e60ce);
+}
+
+/* --- Collapsible Details Styling --- */
+details {
+  background: var(--md-card-bg, #23233b);
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 0.7em 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--md-accent-fg-color, #48bfe3);
+  transition: box-shadow 0.2s;
+}
+details[open] {
+  box-shadow: 0 4px 16px rgba(94,96,206,0.13);
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--md-primary-fg-color, #5e60ce);
+  outline: none;
+  margin-bottom: 0.5em;
+}
+details[open] summary {
+  color: var(--md-accent-fg-color, #48bfe3);
+}
+
+/* --- Interactive Button (for demos) --- */
+.interactive-btn {
+  background: var(--md-primary-fg-color, #5e60ce);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7em 1.4em;
+  font-size: 1.08em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin: 0.7em 0;
+  outline: none;
+}
+.interactive-btn:hover, .interactive-btn:focus {
+  background: var(--md-accent-fg-color, #48bfe3);
+  color: #23233b;
+  box-shadow: 0 4px 16px rgba(94,96,206,0.18);
+}

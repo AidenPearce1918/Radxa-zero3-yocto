@@ -2,66 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/contributing/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/faq/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/getting-started/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/hardware-accessories/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/hardware-pinout/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/hardware-power/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/hardware-revisions/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/hardware-specs/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/hardware/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/resources-community/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/resources-datasheets/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/resources-downloads/</loc>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/software-configuration/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/software-flashing/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/software-os/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/software-packages/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/software-updates/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/software/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/troubleshooting/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/tutorial-first-boot/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/tutorial-gpio/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/tutorial-headless/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
     <url>
          <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/tutorial-networking/</loc>
-         <lastmod>2025-06-28</lastmod>
+         <lastmod>2025-07-05</lastmod>
+    </url>
+    <url>
+         <loc>https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/tutorial-remote/</loc>
+         <lastmod>2025-07-05</lastmod>
     </url>
 </urlset>
