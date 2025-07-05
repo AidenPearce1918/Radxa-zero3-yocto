@@ -2,159 +2,99 @@ site_name: Radxa Zero 3W Docs
 site_url: https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/
 repo_url: https://github.com/aidenpearce1918/radxa-zero3w-yocto-guide
 repo_name: aidenpearce1918/radxa-zero3w-yocto-guide
+
 theme:
   name: material
-  palette:
-    - scheme: slate
-      primary: cyan
-      accent: lime
   font:
     text: Roboto
     code: Fira Code
+  logo: img/radxa_logo.png
+  favicon: img/favicon.ico
   features:
     - navigation.expand
     - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
     - toc.integrate
+    - toc.follow
     - content.code.copy
-    - content.tabs.link
-    - content.action.edit
-    - content.action.view
     - content.code.annotate
     - content.code.highlight
     - content.code.line_numbers
-    - content.code.copy
-    - content.code.fold
-    - content.code.select
-    - content.code.snippet
-    - content.code.syntax
-    - content.code.wrap
-    - content.code.zoom
-    - content.code.expand
-    - content.code.collapse
-    - content.code.toggle
-    - content.code.inline
-    - content.code.block
-    - content.code.inline_block
-    - content.code.block_inline
-    - content.code.block_expand
-    - content.code.block_collapse
-    - content.code.block_toggle
-    - content.code.block_inline_expand
-    - content.code.block_inline_collapse
-    - content.code.block_inline_toggle
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line_numbers
-    - content.code.block_inline_copy
-    - content.code.block_inline_fold
-    - content.code.block_inline_highlight
-    - content.code.block_inline_annotate
-    - content.code.block_inline_zoom
-    - content.code.block_inline_wrap
-    - content.code.block_inline_select
-    - content.code.block_inline_snippet
-    - content.code.block_inline_syntax
-    - content.code.block_inline_line0
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+    - search.suggest
+    - search.highlight
+    - header.autohide
+    - announce.dismiss
+    - navigation.footer
+    - navigation.indexes
+    - toc.sticky
+    - toc.expand
+    - navigation.path
+    - navigation.tracking
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Hardware:
+      - Overview: hardware.md
+      - Specifications: hardware-specs.md
+      - Pinout Diagram: hardware-pinout.md
+      - Accessories: hardware-accessories.md
+      - Power & Connectivity: hardware-power.md
+      - Board Revisions: hardware-revisions.md
+  - Software:
+      - Overview: software.md
+      - Supported OS: software-os.md
+      - Flashing Images: software-flashing.md
+      - Updates & Upgrades: software-updates.md
+      - Configuration: software-configuration.md
+      - Package Management: software-packages.md
+  - Tutorials:
+      - First Boot: tutorial-first-boot.md
+      - Networking Setup: tutorial-networking.md
+      - GPIO Projects: tutorial-gpio.md
+      - Headless Setup: tutorial-headless.md
+      - Remote Access: tutorial-remote.md
+  - Troubleshooting: troubleshooting.md
+  - FAQ: faq.md
+  - Contributing: contributing.md
+  - Resources:
+      - Downloads: resources-downloads.md
+      - Community: resources-community.md
+      - Datasheets: resources-datasheets.md
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+  - tags
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aidenpearce1918/radxa-zero3w-yocto-guide
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Radxa_Official
+  copyright: Copyright &copy; 2025 Aiden Pearce
+  generator: false
+  manifest: manifest.webmanifest
+  alternate:
+    - name: English
+      link: /
+      lang: en
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/ui-elements.css
+
+extra_javascript:
+  - javascripts/ui-interactive.js
+#  - javascripts/dark-toggle.js
+
+site_description: Official documentation for the Radxa Zero 3W single-board computer, including setup, hardware, software, and tutorials.
+site_author: Aiden Pearce

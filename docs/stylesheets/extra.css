@@ -1,0 +1,276 @@
+/* --- Color Palettes --- */
+:root {
+  /* Unified color palette for a single modern dark theme */
+  --md-primary-fg-color: #5e60ce;      /* Indigo */
+  --md-accent-fg-color: #48bfe3;       /* Mint blue */
+  --md-typeset-a-color: #5390d9;       /* Blue for links */
+  --md-bg-gradient: linear-gradient(120deg, #23233b 0%, #22223b 100%);
+  --md-card-bg: #23233b;
+  --md-admonition-border: #48bfe3;
+  --md-admonition-bg: #23233b;
+  --md-card-shadow: 0 4px 16px rgba(94,96,206,0.18);
+  --md-typeset-table-color: #23233b;
+  --md-table-header-bg: #23233b;
+  --md-table-header-color: #48bfe3;
+  --md-table-row-even: #23233b;
+  --md-table-row-odd: #26263b;
+}
+
+/* --- General UI/UX Enhancements --- */
+
+body {
+  background: var(--md-bg-gradient), #23233b;
+  background-attachment: fixed;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  background: none;
+  -webkit-text-fill-color: unset;
+  color: var(--md-primary-fg-color);
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.md-typeset h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid var(--md-primary-fg-color);
+  padding-bottom: 0.2em;
+}
+
+.md-typeset h2 {
+  font-size: 1.5em;
+  border-left: 4px solid var(--md-accent-fg-color);
+  padding-left: 0.5em;
+}
+
+.md-typeset .admonition, .md-typeset details {
+  border-radius: 12px;
+  box-shadow: var(--md-card-shadow);
+  background: var(--md-admonition-bg);
+  border-left: 6px solid var(--md-admonition-border);
+  margin: 1.5em 0;
+  padding: 1em 1.2em;
+}
+
+.md-typeset .admonition-title {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  font-size: 1.1em;
+}
+
+.md-typeset code, .md-typeset pre {
+  background: #181c20;
+  color: #ffb300;
+  border-radius: 6px;
+  font-size: 1em;
+  padding: 0.2em 0.5em;
+}
+
+.md-typeset pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+img {
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  margin: 1.5em 0;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 36px rgba(0,188,212,0.18);
+}
+
+.md-typeset table {
+  background: var(--md-typeset-table-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin: 1.5em 0;
+}
+
+.md-typeset th, .md-typeset td {
+  padding: 0.85em 1.1em;
+  border: none;
+}
+
+.md-typeset th {
+  background: var(--md-table-header-bg);
+  color: var(--md-table-header-color);
+  font-weight: 800;
+  font-size: 1.08em;
+}
+
+.md-typeset tr:nth-child(even) {
+  background: var(--md-table-row-even);
+}
+
+.md-typeset tr:nth-child(odd) {
+  background: var(--md-table-row-odd);
+}
+
+.md-typeset ul, .md-typeset ol {
+  padding-left: 2em;
+}
+
+.md-typeset ul li::marker {
+  color: var(--md-accent-fg-color);
+  font-size: 1.2em;
+}
+
+/* Card UI element for callouts or feature boxes */
+.card-ui {
+  background: rgba(35, 35, 59, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(94,96,206,0.18);
+  border-left: 7px solid var(--md-accent-fg-color);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.card-ui:hover {
+  box-shadow: 0 12px 36px rgba(0,188,212,0.18);
+  border-left: 7px solid var(--md-primary-fg-color);
+}
+
+/* Interactive button style */
+.interactive-btn {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7em 1.4em;
+  font-size: 1.08em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,188,212,0.10);
+  margin: 0.7em 0;
+  outline: none;
+}
+.interactive-btn:hover, .interactive-btn:focus {
+  background: var(--md-accent-fg-color);
+  color: #23272e;
+  box-shadow: 0 4px 16px rgba(255,179,0,0.18);
+}
+
+/* Animated underline for links */
+.md-typeset a {
+  position: relative;
+  color: var(--md-typeset-a-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.md-typeset a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--md-accent-fg-color);
+  transition: width .2s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.md-typeset a:hover::after {
+  width: 100%;
+}
+
+/* Navbar: improve contrast */
+.md-header, .md-tabs {
+  background: #181a20 !important;
+  color: #f5f5f5 !important;
+}
+.md-header__title, .md-tabs__link, .md-tabs__item {
+  color: #f5f5f5 !important;
+}
+.md-tabs__link--active, .md-tabs__item--active {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 700;
+  border-bottom: 2px solid var(--md-accent-fg-color);
+}
+
+/* Sidebar active item: subtle highlight */
+.md-nav__item--active > .md-nav__link {
+  background: rgba(38,198,218,0.18) !important; /* Soft blue highlight */
+  color: var(--md-primary-fg-color) !important;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: none !important;
+  border-left: 4px solid var(--md-accent-fg-color);
+  padding-left: 0.7em;
+}
+
+/* Sidebar text: brighter for readability */
+.md-nav__link {
+  color: #b0bec5 !important;
+  font-weight: 500;
+}
+.md-nav__link:hover {
+  color: var(--md-primary-fg-color) !important;
+}
+
+/* Remove heavy shadow from sidebar active */
+.md-nav__item--active > .md-nav__link {
+  box-shadow: none !important;
+}
+
+/* Focus styles for accessibility */
+.md-typeset, .md-nav__link {
+  color: #f5f5f5 !important;
+}
+.md-nav__link:focus, .interactive-btn:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* Collapsible details styling */
+details {
+  background: var(--md-card-bg, #23233b);
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 0.7em 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--md-accent-fg-color, #48bfe3);
+  transition: box-shadow 0.2s;
+}
+details[open] {
+  box-shadow: 0 4px 16px rgba(94,96,206,0.13);
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--md-primary-fg-color, #5e60ce);
+  outline: none;
+  margin-bottom: 0.5em;
+}
+details[open] summary {
+  color: var(--md-accent-fg-color, #48bfe3);
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 800px) {
+  .md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    font-size: 1.1em;
+    padding: 0.2em 0;
+  }
+  .md-typeset table, .md-typeset th, .md-typeset td {
+    font-size: 0.95em;
+    padding: 0.5em;
+  }
+  img {
+    margin: 1em 0;
+  }
+  .card-ui {
+    padding: 1em 0.7em;
+  }
+}
+@media (max-width: 600px) {
+  .md-typeset th, .md-typeset td {
+    padding: 0.4em 0.5em;
+  }
+}
