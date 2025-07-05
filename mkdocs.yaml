@@ -72,7 +72,7 @@ plugins:
   - git-revision-date-localized
   - minify:
       minify_html: true
-  - tags
+  - awesome-pages
 
 extra:
   social:
