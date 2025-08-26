@@ -53,7 +53,7 @@ It features a quad-core ARM Cortex-A53 CPU, up to 8GB RAM, Wi-Fi 5, Bluetooth 5.
 
 - [Radxa Forum](https://forum.radxa.com/)
 - [Official Documentation](https://docs.radxa.com/en/zero/zero3)
-- [GitHub Repository](https://github.com/aidenpearce1918/radxa-zero3w-yocto-guide)
+- [GitHub Repository](https://aidenpearce1918.github.io/Radxa-zero3-yocto/)
 
 ---
 
