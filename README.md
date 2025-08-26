@@ -49,4 +49,4 @@ To help you get started with hardware interfacing and development, refer to the 
 
 ---
 
-For a full setup guide, visit the [Radxa Zero 3W Yocto Guide Website](https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/).
+For a full setup guide, visit the [Radxa Zero 3W Yocto Guide Website](https://aidenpearce1918.github.io/Radxa-zero3-yocto/).
