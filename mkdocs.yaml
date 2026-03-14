@@ -1,7 +1,7 @@
 site_name: Radxa Zero 3W Docs
-site_url: https://aidenpearce1918.github.io/radxa-zero3w-yocto-guide/
-repo_url: https://github.com/aidenpearce1918/radxa-zero3w-yocto-guide
-repo_name: aidenpearce1918/radxa-zero3w-yocto-guide
+site_url: https://aidenpearce1918.github.io/Radxa-zero3-yocto/
+repo_url: https://github.com/aidenpearce1918/Radxa-zero3-yocto
+repo_name: aidenpearce1918/Radxa-zero3-yocto
 
 theme:
   name: material
@@ -77,7 +77,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/aidenpearce1918/radxa-zero3w-yocto-guide
+      link: https://github.com/aidenpearce1918/Radxa-zero3-yocto
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/Radxa_Official
   copyright: Copyright &copy; 2025 Aiden Pearce
