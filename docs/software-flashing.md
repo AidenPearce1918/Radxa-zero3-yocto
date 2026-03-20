@@ -89,6 +89,8 @@ Output: `.wic` or `.img` file (typically 500MB - 1GB)
 7. Wait for completion (5-10 minutes depending on speed)
 8. Safely eject card
 
+![Balena Etcher Flashing Process](img/balena_etcher.png)
+
 ### **1.5 Flash with `dd` Command (Linux/macOS)**
 
 **⚠️ Warning:** `dd` can overwrite any disk. Use with caution!

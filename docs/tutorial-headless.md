@@ -61,13 +61,15 @@ ssh radxa@<ip-address>
 
 Use this if SSH is unavailable or for first-time debug.
 
-### Wiring (3.3V logic):
+### Wiring (3.3V logic)
 
 | FTDI | Radxa |
 | ---- | ----- |
 | GND  | GND   |
 | TX   | RX    |
 | RX   | TX    |
+
+![UART Wiring Diagram](img/uart_wiring.png)
 
 Use `screen`, `minicom`, or `PuTTY`:
 

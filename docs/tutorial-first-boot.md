@@ -11,6 +11,8 @@ Congratulations on successfully flashing your Radxa Zero 3W! This tutorial will 
 3. **Apply Power:** Connect a reliable 5V/2A power supply to the USB-C port.
 4. **Watch the LED:** The green power LED should turn on. If configured in your OS, a blue activity LED will blink as the system boots.
 
+![Radxa Zero 3W Powered On](img/board_powered_on.png)
+
 !!! info "Boot Time"
     The first boot usually takes a bit longer (1-3 minutes) because the operating system is generating SSH keys and resizing the root filesystem to fill the SD card.
 
@@ -55,7 +57,7 @@ Most modern images (like Armbian) auto-expand the root partition to use the enti
 df -h /
 ```
 
-If the size looks much smaller than your SD card, you may need to expand it manually. 
+If the size looks much smaller than your SD card, you may need to expand it manually.
 
 **On Armbian:**
 Run `armbian-config`, navigate to **System** -> **Expand**, and reboot.

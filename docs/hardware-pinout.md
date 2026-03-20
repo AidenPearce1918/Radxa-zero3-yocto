@@ -4,13 +4,11 @@ The Radxa Zero 3W features a 40-pin GPIO header compatible with the Raspberry Pi
 
 ---
 
-## 🖌️ Board Hardware Overview
-
----
-
-## 📋 Pinout Overview
+##  Pinout Overview
 
 Below is the standard 40-pin GPIO layout for the Radxa Zero 3W:
+
+![Radxa Zero 3W Pinout Diagram](img/radxa_zero_3w_pinout.png)
 
 > **Note:** If you do not see the images, ensure they exist in your `docs/img/` directory.
 

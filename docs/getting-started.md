@@ -62,6 +62,8 @@ For headless setup or troubleshooting, connect a 3.3V FTDI USB-to-serial adapter
 | TX       | RX          |
 | RX       | TX          |
 
+![UART Connection to Radxa Zero 3W](img/uart_connection.png)
+
 **How to connect:**
 
 * **Linux/macOS:**
