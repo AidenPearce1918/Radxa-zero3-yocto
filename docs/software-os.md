@@ -107,42 +107,61 @@ sudo apt-get install -y git python3 python3-pip build-essential \
 ### **Clone & Setup**
 
 ```bash
-# Clone Radxa Yocto
-git clone https://github.com/radxa/yocto.git
-cd yocto
+# 1. Clone Poky (using the 'kirkstone' LTS branch as an example)
+git clone git://git.yoctoproject.org/poky.git -b kirkstone
+cd poky
 
-# Initialize build environment
-source setup-environment radxa-zero-3w
-
-# This creates:
-# - build/ directory with cache
-# - conf/local.conf for customization
-# - conf/bblayers.conf for layer management
+# 2. Clone essential dependencies and BSP layers
+git clone git://git.openembedded.org/meta-openembedded -b kirkstone
+git clone git://git.yoctoproject.org/meta-arm -b kirkstone
+git clone git://git.yoctoproject.org/meta-rockchip -b kirkstone
+git clone https://github.com/radxa/meta-radxa.git -b kirkstone
 ```
 
-### **Configuration (local.conf)**
+### **Initialize Build Environment**
 
-Edit `build/conf/local.conf` to customize:
+Set up your build directory. This script will automatically create the `build/conf` directory with default configuration files.
 
 ```bash
-# Number of parallel build tasks
+source oe-init-build-env build
+
+```
+
+### Configuration (bblayers.conf & local.conf)
+
+1. Configure conf/bblayers.conf (Add Layers):
+Yocto needs to know where your downloaded layers are located. Run the following commands from inside your build/ directory to add them to your bblayers.conf:
+
+```bash
+bitbake-layers add-layer ../meta-openembedded/meta-oe
+bitbake-layers add-layer ../meta-openembedded/meta-python
+bitbake-layers add-layer ../meta-openembedded/meta-networking
+bitbake-layers add-layer ../meta-arm/meta-arm
+bitbake-layers add-layer ../meta-arm/meta-arm-toolchain
+bitbake-layers add-layer ../meta-rockchip
+bitbake-layers add-layer ../meta-radxa
+```
+
+**2. Configure `conf/local.conf` (System Settings):**
+
+Open `conf/local.conf` in your text editor and append/modify the following settings to target the Radxa Zero 3W:
+
+```bash
+# Machine target for Radxa Zero 3W
+MACHINE = "radxa-zero-3w"
+
+# Number of parallel build tasks (adjust based on your CPU cores)
 BB_NUMBER_THREADS = "4"
 PARALLEL_MAKE = "-j 4"
 
-# Machine target
-MACHINE = "radxa-zero-3w"
+# Image features (SSH, debugging, etc.)
+IMAGE_FEATURES += "ssh-server-openssh dev-pkgs"
 
-# Image features
-IMAGE_FEATURES += "ssh-server-openssh"
-IMAGE_FEATURES += "dev-pkgs"  # Development packages
+# Set package manager format to deb (APT)
+PACKAGE_CLASSES = "package_deb"
 
-# Package format
-PACKAGE_CLASSES = "package_deb"  # Use APT
-
-# Distro features
-DISTRO_FEATURES += "wifi"
-DISTRO_FEATURES += "bluetooth"
-```
+# Enable hardware features
+DISTRO_FEATURES += "wifi bluetooth"
 
 ---
 
@@ -291,8 +310,7 @@ make
 1. **Build Yocto** → [Flashing Images & Build Deployment](software-flashing.md)
 2. **Configure System** → [Software Configuration](software-configuration.md)
 3. **Manage Packages** → [Package Management](software-packages.md)
-4. **Update System** → [Updates & Upgrades](software-updates.md)
-5. **Troubleshoot** → [Troubleshooting Guide](troubleshooting.md)
+4. **Troubleshoot** → [Troubleshooting Guide](troubleshooting.md)
 
 ---
 

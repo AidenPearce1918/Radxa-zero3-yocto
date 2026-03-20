@@ -9,7 +9,8 @@
   --md-admonition-border: #48bfe3;
   --md-admonition-bg: #23233b;
   --md-card-shadow: 0 4px 16px rgba(94,96,206,0.18);
-  --md-typeset-table-color: #23233b;
+  --md-typeset-table-color: #b0bec5;   /* Text color for tables */
+  --md-table-bg-color: #23233b;        /* Background color for tables */
   --md-table-header-bg: #23233b;
   --md-table-header-color: #48bfe3;
   --md-table-row-even: #23233b;
@@ -87,7 +88,7 @@ img:hover {
 }
 
 .md-typeset table {
-  background: var(--md-typeset-table-color);
+  background: var(--md-table-bg-color);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
@@ -115,8 +116,12 @@ img:hover {
 }
 
 .md-typeset table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  color: #f5f5f5 !important;
+  background-color: #2e2e48 !important;
+}
+
+.md-typeset table tbody tr:hover td,
+.md-typeset table tbody tr:hover td a {
+  color: #ffffff !important;
 }
 
 .md-typeset ul, .md-typeset ol {

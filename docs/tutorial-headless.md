@@ -96,7 +96,7 @@ ssh radxa@192.168.100.1
 ## 🛠️ Tips & Troubleshooting
 
 * Use `arp -a` to scan local IPs
-* LEDs may indicate boot status (check `hardware-power.md`)
+* LEDs may indicate boot status (check Power Management)
 * Use serial logs (`dmesg`) for troubleshooting
 
 ---

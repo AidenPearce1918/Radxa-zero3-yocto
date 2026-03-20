@@ -163,8 +163,6 @@ The Radxa Zero 3W supports multiple update mechanisms:
 - **Full Image Reflashing** - Deploy new Yocto image
 - **Kernel Updates** - Target-specific kernel packages
 
-👉 See [Updates & Upgrades](software-updates.md) for detailed update strategies.
-
 ---
 
 ## 📚 Next Steps

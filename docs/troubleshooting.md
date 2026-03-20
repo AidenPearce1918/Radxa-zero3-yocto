@@ -46,8 +46,8 @@ Common issues and solutions for the Radxa Zero 3W with Yocto and other Linux dis
 picocom -b 1500000 /dev/ttyUSB0
 
 # 3. Rebuild Yocto image
-cd ~/yocto
-source setup-environment radxa-zero-3w
+cd ~/poky
+source oe-init-build-env build
 bitbake -c clean core-image-minimal
 bitbake core-image-minimal
 
@@ -74,7 +74,8 @@ picocom -b 1500000 /dev/ttyUSB0
 # Device tree may have incorrect GPIO/clock configuration
 
 # 4. Rebuild with stable kernel version
-cd ~/yocto
+cd ~/poky
+source oe-init-build-env build
 nano build/conf/local.conf
 # Modify PREFERRED_VERSION_linux-kernel = "5.10%"
 
@@ -166,7 +167,8 @@ sudo ethtool wlan0
 sudo iw dev wlan0 link
 
 # 5. Rebuild Yocto with WiFi support
-cd ~/yocto
+cd ~/poky
+source oe-init-build-env build
 nano build/conf/local.conf
 # Ensure: IMAGE_INSTALL += "linux-firmware-aic8800"
 # And: DISTRO_FEATURES += "wifi"
@@ -232,7 +234,8 @@ sudo journalctl --vacuum=100M
 sudo logrotate -f /etc/logrotate.conf
 
 # 6. Rebuild smaller Yocto image
-cd ~/yocto
+cd ~/poky
+source oe-init-build-env build
 nano build/conf/local.conf
 # Add: IMAGE_ROOTFS_SIZE = "256"  # Reduce MB
 # Remove: IMAGE_FEATURES += "dev-pkgs"
@@ -499,7 +502,7 @@ rm -rf build/tmp/
 # On larger partition:
 mkdir /mnt/yocto-build
 cd /mnt/yocto-build
-source ~/yocto/oe-init-build-env
+source ~/poky/oe-init-build-env build
 
 # 4. Reduce parallel jobs
 nano build/conf/local.conf

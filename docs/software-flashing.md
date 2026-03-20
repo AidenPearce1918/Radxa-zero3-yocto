@@ -145,12 +145,14 @@ sudo apt-get install -y git python3 python3-pip build-essential \
   chrpath socat texinfo wget cpio diffstat unzip texi2html perl \
   xz-utils debianutils iputils-ping libssl-dev
 
-# Clone Radxa Yocto
-git clone https://github.com/radxa/yocto.git
-cd yocto
+# Clone Poky and initialize
+git clone git://git.yoctoproject.org/poky.git -b kirkstone
+cd poky
 
-# Initialize environment
-source setup-environment radxa-zero-3w
+# (See OS Setup guide for cloning necessary meta layers)
+
+# Initialize build environment
+source oe-init-build-env build
 ```
 
 ### **2.2 Configure Build (Optional)**
