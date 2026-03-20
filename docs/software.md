@@ -17,6 +17,7 @@ The Radxa Zero 3W supports multiple operating systems and software environments,
 - ✅ **Integration** with Radxa's optimized board support packages (BSP)
 
 **Key Benefits for Radxa Zero 3W:**
+
 - Pre-configured recipes for RK3566 SoC (Rockchip)
 - Optimized drivers for WiFi (AIC8800), Bluetooth, and GPU (Mali-G52)
 - Hardware acceleration support
@@ -32,12 +33,14 @@ The Radxa Zero 3W supports multiple operating systems and software environments,
 A lightweight, Debian-based distribution pre-built for ARM boards.
 
 **Pros:**
+
 - Quick deployment (no build time required)
 - Familiar Debian/APT ecosystem
 - Active community support
 - Multiple desktop/CLI variants
 
 **Cons:**
+
 - Less customization than Yocto
 - Community-maintained (not official Radxa)
 - Larger footprint than custom Yocto builds
@@ -49,6 +52,7 @@ A lightweight, Debian-based distribution pre-built for ARM boards.
 ### **3. Other Linux Distributions**
 
 Additional OS options maintained by the community:
+
 - **Debian** - Full Debian releases (if available)
 - **Ubuntu** - Ubuntu Server/Core editions
 - **OpenWrt** - For IoT/networking applications
@@ -63,13 +67,15 @@ Additional OS options maintained by the community:
 When building custom Yocto images for Radxa Zero 3W:
 
 **Core Components:**
+
 - **BitBake** - Task execution engine and scheduler
 - **Metadata** - Recipes (.bb files) and configuration
 - **Radxa BSP** - Board Support Package with device trees, kernel patches
 - **oe-core** - OpenEmbedded core layer
 
 **Build Layers:**
-```
+
+```text
 meta-openembedded/  (OE core recipes)
 meta-radxa/         (Radxa-specific recipes)
 meta-arm/           (ARM SoC support)
@@ -85,10 +91,12 @@ meta-rk3566/        (RK3566-specific optimizations)
 ### **Standard System Tools**
 
 **Package Manager:**
+
 - `apt` (if Debian/Ubuntu-based) or `opkg` (lightweight option)
 - Custom feeds and repositories
 
 **Essential Utilities:**
+
 - `systemd` - System and service manager
 - `connman` or `NetworkManager` - Network connectivity
 - `alsa-utils` - Audio support
@@ -98,6 +106,7 @@ meta-rk3566/        (RK3566-specific optimizations)
 ### **Hardware Support**
 
 **Pre-configured Drivers:**
+
 - Rockchip GPU (Mali-G52) with OpenGL ES support
 - Wireless: AIC8800 WiFi 6 driver
 - Bluetooth 5.4 stack
@@ -132,11 +141,13 @@ meta-rk3566/        (RK3566-specific optimizations)
 ## 📚 Software Versions & Stability
 
 **Release Channels:**
+
 - **Stable** - Tested, long-term support
 - **Latest** - Newest features, frequent updates
 - **Development** - Cutting-edge, unstable
 
 **Version Information:**
+
 - Kernel version (depends on Yocto release and BSP)
 - Yocto releases: LTS (long-term), stable point releases
 - Package versions: Latest from OE-core and meta layers
@@ -172,4 +183,3 @@ The Radxa Zero 3W supports multiple update mechanisms:
 - [Radxa BSP & Build Guides](https://github.com/radxa/yocto)
 - [OpenEmbedded Metadata](https://layers.openembedded.org/)
 - [Rockchip RK3566 Documentation](https://dl.radxa.com/)
-

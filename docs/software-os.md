@@ -7,7 +7,7 @@ The Radxa Zero 3W supports multiple operating systems, with **Yocto Project** be
 ## 🎯 Operating System Comparison
 
 | OS | Type | Use Case | Build Time | Footprint | Customization |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | **Yocto** | Custom Linux | Embedded, custom firmware | 1-2 hours | Minimal | Maximum |
 | **Armbian** | Pre-built Debian | General purpose, quick start | None | Medium | Limited |
 | **Buildroot** | Minimal Linux | Ultra-light systems, IoT | 30-60 min | Very small | High |
@@ -34,14 +34,16 @@ Yocto Project is a collaborative, open-source initiative providing tools and pro
 
 #### **1. Radxa Official Yocto**
 
-**Repository:** https://github.com/radxa/yocto
+**Repository:** <https://github.com/radxa/yocto>
 
 Pre-configured Yocto layers with Radxa optimizations:
+
 - `meta-radxa` - Board support packages
 - `meta-arm` - ARM SoC support
 - `meta-openembedded` - Community recipes
 
 **Supported Distributions:**
+
 - **Core** - Minimal system (systemd, basic tools)
 - **X11** - Graphical environment with X11
 - **Wayland** - Modern display server
@@ -54,6 +56,7 @@ git checkout radxa-zero-3w
 ```
 
 **Build Image:**
+
 ```bash
 source setup-environment
 bitbake core-image-minimal  # Minimal image
@@ -62,6 +65,7 @@ bitbake core-image-weston  # Wayland desktop
 ```
 
 **Output:** `build/tmp/deploy/images/radxa-zero-3w/`
+
 - `.wic` - Complete flashable image
 - `.tar.bz2` - Filesystem archive
 - Device trees and bootloaders
@@ -69,7 +73,8 @@ bitbake core-image-weston  # Wayland desktop
 #### **2. OpenEmbedded (Community)**
 
 **Generic ARM/RK3566 recipes:**
-- https://github.com/openembedded/meta-openembedded
+
+- <https://github.com/openembedded/meta-openembedded>
 
 Broader package selection, less Radxa-specific optimization.
 
@@ -84,12 +89,14 @@ bitbake core-image-base  # With gcc, make, basic dev tools
 ### **System Requirements**
 
 **Host Machine:**
+
 - Ubuntu 20.04 LTS / 22.04 LTS recommended
 - 4+ cores, 8GB RAM minimum (16GB+ for faster builds)
 - 30+ GB free disk space
 - Git, Python 3.7+
 
 **Essential Packages:**
+
 ```bash
 sudo apt-get update
 sudo apt-get install -y git python3 python3-pip build-essential \
@@ -164,7 +171,7 @@ bitbake curl  # Just build curl recipe
 
 Located in `build/tmp/deploy/images/radxa-zero-3w/`:
 
-```
+```text
 ├── core-image-minimal-radxa-zero-3w.wic       # Flashable image
 ├── core-image-minimal-radxa-zero-3w.wic.bz2   # Compressed
 ├── core-image-minimal-radxa-zero-3w.tar.bz2   # Filesystem
@@ -200,6 +207,7 @@ do_rootfs_prepend() {
 ```
 
 Build it:
+
 ```bash
 bitbake my-custom-image
 ```
@@ -269,7 +277,7 @@ make
 ## 📊 OS Feature Matrix
 
 | Feature | Yocto | Armbian | Buildroot | OpenWrt |
-|---------|-------|---------|-----------|---------|
+| --------- | ------- | --------- | ----------- | --------- |
 | Customization | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 | Build Time | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 | Footprint | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
@@ -295,4 +303,3 @@ make
 - [Radxa GitHub - Yocto](https://github.com/radxa/yocto)
 - [Radxa Forum Support](https://forum.radxa.com/)
 - [Rockchip Linux SDK](https://github.com/rockchip-linux)
-

@@ -11,6 +11,7 @@ Common questions about the Radxa Zero 3W, Yocto builds, and embedded Linux devel
 **A:** The Radxa Zero 3W is a compact, high-performance single-board computer featuring a Rockchip RK3566 quad-core ARM processor, up to 8GB RAM, WiFi 6, Bluetooth 5.4, and a 40-pin GPIO header. It's designed for embedded projects, IoT, edge computing, and maker applications.
 
 **Key Specs:**
+
 - CPU: Rockchip RK3566 (Cortex-A55)
 - RAM: 1GB / 2GB / 4GB / 8GB
 - Storage: microSD + optional eMMC
@@ -22,12 +23,14 @@ Common questions about the Radxa Zero 3W, Yocto builds, and embedded Linux devel
 ### **Q: How much does Radxa Zero 3W cost?**
 
 **A:** Pricing varies by variant:
+
 - **1GB RAM, no eMMC**: ~$20-25
 - **2GB RAM, no eMMC**: ~$25-30
 - **4GB RAM + 32GB eMMC**: ~$60-70
 - **8GB RAM + 64GB eMMC**: ~$100+
 
 Check official retailers:
+
 - [Radxa Store](https://radxa.com/products/)
 - [Seeed Studio](https://www.seeedstudio.com/)
 - [AliExpress](https://www.aliexpress.com/) (third-party sellers)
@@ -36,7 +39,8 @@ Check official retailers:
 
 ### **Q: Is Radxa Zero 3W compatible with Raspberry Pi accessories?**
 
-**A:** **Partially**. 
+**A:** **Partially**.
+
 - ✅ **40-pin GPIO header** - Raspberry Pi compatible
 - ✅ **Most GPIO libraries** work (RPi.GPIO, gpiozero)
 - ✅ **Mechanical fit** similar to Raspberry Pi Zero
@@ -82,6 +86,7 @@ See [Supported OS Guide](software-os.md) for detailed setup instructions.
 **A:** Depends on your use case:
 
 **Choose Yocto if:**
+
 - You need a minimal, custom image
 - You want full control over components
 - You're building embedded products
@@ -89,6 +94,7 @@ See [Supported OS Guide](software-os.md) for detailed setup instructions.
 - Your application requires specific kernel version
 
 **Choose Armbian if:**
+
 - You want quick deployment (no build time)
 - You need familiar Debian/APT ecosystem
 - You prefer community-maintained OS
@@ -109,6 +115,7 @@ See [Supported OS Guide](software-os.md) for detailed setup instructions.
   - Image complexity (minimal < full-cmdline < desktop)
 
 **Speedup tips:**
+
 ```bash
 # Use more parallel jobs
 BB_NUMBER_THREADS = "8"
@@ -128,6 +135,7 @@ PARALLEL_MAKE = "-j 8"
 - ✅ Custom licensing compliance
 
 Production workflow:
+
 ```bash
 git tag v1.0.0
 source setup-environment radxa-zero-3w
@@ -148,7 +156,8 @@ bitbake core-image-minimal
 - **GPIO GND:** Multiple pins available
 
 **Safe approach:**
-```
+
+```text
 USB-C 5V → Main power
 GPIO 5V → External devices (sensors, LEDs, etc.)
 ```
@@ -174,6 +183,7 @@ Always use level shifters if interfacing with 5V devices.
 **A:** **No built-in ADC**. GPIO pins are digital only.
 
 **Solutions for analog sensing:**
+
 ```python
 # Use external ADC module (ADS1115, MCP3008)
 import board
@@ -194,12 +204,14 @@ print(f"ADC value: {channel.value}")
 **A:** **Yes**, with proper addressing:
 
 **I2C (2 devices max theoretically, many in practice):**
+
 ```bash
 i2cdetect -y 1  # Scan for devices
 # Common addresses: 0x48-0x4F (ADS1115), 0x68 (MPU6050)
 ```
 
 **SPI (multiple Chip Select pins):**
+
 ```python
 # Each device needs separate CS pin
 spi = busio.SPI(clock=board.SCLK, MOSI=board.MOSI, MISO=board.MISO)
@@ -217,13 +229,15 @@ See [GPIO Tutorial](tutorial-gpio.md) for examples.
 
 **A:** Several methods:
 
-**Method 1: nmcli (NetworkManager)**
+#### Method 1: nmcli (NetworkManager)
+
 ```bash
 sudo nmcli device wifi list
 sudo nmcli device wifi connect "SSID" password "PASSWORD"
 ```
 
-**Method 2: wpa_supplicant**
+#### Method 2: wpa_supplicant
+
 ```bash
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 # Add:
@@ -234,7 +248,8 @@ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 sudo systemctl restart wpa_supplicant
 ```
 
-**Method 3: connman**
+#### Method 3: connman
+
 ```bash
 sudo connmanctl
 > enable wifi
@@ -251,6 +266,7 @@ See [Networking Setup Tutorial](tutorial-networking.md) for details.
 ### **Q: What WiFi standard does Zero 3W support?**
 
 **A:** **WiFi 6 (802.11ax)**, but also supports:
+
 - 802.11a (5GHz)
 - 802.11b (2.4GHz)
 - 802.11g (2.4GHz)
@@ -323,12 +339,14 @@ sudo systemctl disable unnecessary-service
 **A:** Standard Linux security practices apply:
 
 **Keep these updated:**
+
 - Linux kernel
 - C library (libc)
 - OpenSSL/SSH
 - Python/Node.js (if used)
 
 **Monitor:**
+
 - Failed login attempts: `sudo journalctl -u ssh`
 - Disk space: `df -h`
 - Running services: `sudo ss -tulpn`
@@ -406,12 +424,14 @@ ssh user@192.168.1.xxx
 **A:** **Yes**, but slow. Better to cross-compile:
 
 **On the board (slow):**
+
 ```bash
 sudo apt install build-essential gcc g++ make
 gcc -o my_program my_program.c
 ```
 
 **Cross-compile on x86 (fast):**
+
 ```bash
 # On build machine (Ubuntu x86)
 sudo apt install gcc-aarch64-linux-gnu
@@ -504,13 +524,14 @@ load average: 0.5, 0.3, 0.1  # 1, 5, 15 min average
 
 **A:** Multiple resources:
 
-1. **Radxa Forum** - https://forum.radxa.com/ (Official)
-2. **GitHub Issues** - https://github.com/radxa/yocto/issues
+1. **Radxa Forum** - <https://forum.radxa.com/> (Official)
+2. **GitHub Issues** - <https://github.com/radxa/yocto/issues>
 3. **Reddit** - r/radxa, r/embedded_linux
 4. **Discord/Chat** - Radxa community channels
 5. **This Documentation** - [Troubleshooting](troubleshooting.md)
 
 **When asking for help, include:**
+
 - Board model & variant (RAM, storage)
 - OS & kernel version (`uname -a`)
 - Steps to reproduce issue
@@ -538,9 +559,9 @@ See [Contributing Guide](contributing.md) for details.
 
 **A:** Recommended resources:
 
-- **Yocto Project** - https://www.yoctoproject.org/
-- **OpenEmbedded** - https://www.openembedded.org/
-- **Linux Kernel Docs** - https://www.kernel.org/doc/
+- **Yocto Project** - <https://www.yoctoproject.org/>
+- **OpenEmbedded** - <https://www.openembedded.org/>
+- **Linux Kernel Docs** - <https://www.kernel.org/doc/>
 - **GPIO & Sensors** - [Our GPIO Tutorial](tutorial-gpio.md)
 - **ARM Architecture** - ARM official documentation
 
@@ -565,7 +586,7 @@ See [GPIO Tutorial](tutorial-gpio.md) for step-by-step examples.
 ## 🔗 Quick Links
 
 | Topic | Link |
-|-------|------|
+| ----- | ---- |
 | Hardware Specs | [Specifications](hardware-specs.md) |
 | Pinout Diagram | [GPIO Pinout](hardware-pinout.md) |
 | Getting Started | [First Steps](getting-started.md) |
@@ -584,4 +605,3 @@ See [GPIO Tutorial](tutorial-gpio.md) for step-by-step examples.
 2. Search [Radxa Forum](https://forum.radxa.com/)
 3. Read [Official Radxa Docs](https://docs.radxa.com/en/zero/zero3)
 4. File [GitHub Issue](https://github.com/radxa)
-

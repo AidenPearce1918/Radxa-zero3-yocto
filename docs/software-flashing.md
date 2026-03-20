@@ -16,6 +16,7 @@ You have two main options:
 ## 📋 What You'll Need
 
 ### **Hardware**
+
 - Radxa Zero 3W board
 - microSD card (Class 10, 8GB+ recommended) OR eMMC module
 - USB-C card reader
@@ -23,7 +24,8 @@ You have two main options:
 - Computer running Linux, macOS, or Windows
 
 ### **Software**
-- **Balena Etcher** (recommended) - https://www.balena.io/etcher/
+
+- **Balena Etcher** (recommended) - <https://www.balena.io/etcher/>
 - OR `dd` command (Linux/macOS)
 - OR Win32DiskImager (Windows)
 
@@ -34,17 +36,16 @@ You have two main options:
 ### **1.1 Download Image**
 
 **Official Radxa Yocto Releases:**
-```bash
-https://github.com/radxa/yocto/releases
-```
 
-Or community Armbian:
-```bash
+**Community Armbian:**
+
+```text
 https://www.armbian.com/radxa-zero/
 ```
 
 **Expected files:**
-```
+
+```text
 radxa-zero-3w-yocto-*.wic.bz2      # Compressed Yocto image
 Armbian_*.img.xz                    # Compressed Armbian image
 ```
@@ -124,6 +125,7 @@ sudo eject /dev/sdX
 4. LED should blink (if configured)
 
 **Login:**
+
 - Username: `root` (Yocto, if debug-tweaks enabled)
 - Username: `radxa` (Armbian, no password set initially)
 - Password: (check release notes)
@@ -192,6 +194,7 @@ bitbake -k core-image-minimal &
 **Build time:** 1-3 hours (first build), 15-30 minutes (subsequent)
 
 **Monitor progress:**
+
 ```bash
 # In another terminal
 tail -f build/tmp/log.do_build
@@ -234,12 +237,14 @@ Follow **1.6 First Boot** steps above.
 If your board has eMMC module (instead of microSD):
 
 1. **Prepare USB Adapter:**
+
    ```bash
    # Use Radxa's RockChip USB loader tool
    # Download: https://github.com/radxa/tools
    ```
 
 2. **Flash via USB:**
+
    ```bash
    # Put board into Maskrom mode (hold specific button during boot)
    # Then:
@@ -326,7 +331,7 @@ sudo dd if=image.wic of=/dev/sdX bs=4M status=progress
 ## 📊 Common Image Sizes
 
 | Image Type | Size | Time to Flash |
-|---|---|---|
+| --- | --- | --- |
 | core-image-minimal | 100-150 MB | 1-2 min |
 | core-image-full-cmdline | 300-500 MB | 3-5 min |
 | core-image-weston (Wayland) | 800-1200 MB | 8-10 min |
@@ -349,4 +354,3 @@ sudo dd if=image.wic of=/dev/sdX bs=4M status=progress
 - [Yocto Build Complete Guide](https://docs.yoctoproject.org/singleindex.html)
 - [Radxa Yocto GitHub](https://github.com/radxa/yocto)
 - [RockChip Tools & Docs](https://github.com/rockchip-linux)
-

@@ -20,7 +20,7 @@ Welcome to your Radxa Zero 3W! This step-by-step guide will help you set up your
 * FTDI USB-to-serial adapter (for headless setup or troubleshooting)
 
 !!! tip "Why use a quality power supply?"
-Using a reliable 5V/2A USB-C power supply ensures stable operation and helps prevent random reboots or SD card corruption.
+    Using a reliable 5V/2A USB-C power supply ensures stable operation and helps prevent random reboots or SD card corruption.
 
 ---
 
@@ -32,8 +32,8 @@ Select the operating system that best fits your needs:
 * [Armbian Images](https://www.armbian.com/radxa-zero/): Lightweight CLI or minimal GUI options
 
 !!! info "Which OS should I choose?"
-\- **Armbian:** Ideal for lightweight headless or server usage.
-\- **Yocto:** Best for embedded development and custom firmware integration.
+    - **Armbian:** Ideal for lightweight headless or server usage.
+    - **Yocto:** Best for embedded development and custom firmware integration.
 
 ---
 
@@ -48,7 +48,7 @@ Select the operating system that best fits your needs:
 5. Safely eject the microSD card from your computer.
 
 !!! tip "Verify your download"
-Always check the image checksum (SHA256 or MD5) to avoid corrupted flashes and boot issues.
+    Always check the image checksum (SHA256 or MD5) to avoid corrupted flashes and boot issues.
 
 ---
 
@@ -69,11 +69,12 @@ For headless setup or troubleshooting, connect a 3.3V FTDI USB-to-serial adapter
   ```bash
   screen /dev/ttyUSB0 115200
   ```
+
 * **Windows:**
   Use [PuTTY](https://www.putty.org/) or [Tera Term](https://osdn.net/projects/ttssh2/releases/).
 
 !!! info "Why use UART?"
-UART gives you direct access to the board’s console, even if HDMI is not working or you’re running headless.
+    UART gives you direct access to the board’s console, even if HDMI is not working or you’re running headless.
 
 ---
 
@@ -90,10 +91,10 @@ UART gives you direct access to the board’s console, even if HDMI is not worki
 * Password: `radxa`
 
 !!! warning "Change your password!"
-For security, change your password immediately after first login:
-`bash
+    For security, change your password immediately after first login:
+    ```bash
     passwd
-    `
+    ```
 
 ---
 
@@ -120,7 +121,7 @@ This ensures your system is up to date and secure.
   * Use a USB-to-Ethernet adapter for a wired connection. Most adapters are plug-and-play.
 
 !!! tip "Headless Wi-Fi setup"
-You can pre-configure Wi-Fi by editing `wpa_supplicant.conf` on the SD card’s `/boot` partition before first boot (if supported by your OS image).
+    You can pre-configure Wi-Fi by editing `wpa_supplicant.conf` on the SD card’s `/boot` partition before first boot (if supported by your OS image).
 
 ---
 
@@ -142,7 +143,7 @@ You can pre-configure Wi-Fi by editing `wpa_supplicant.conf` on the SD card’s 
 
 ---
 
-## 🎉 Congratulations!
+## 🎉 Congratulations
 
 You’ve completed the initial setup for your Radxa Zero 3W.
 Explore the rest of the documentation to unlock the full potential of your board. Happy hacking!

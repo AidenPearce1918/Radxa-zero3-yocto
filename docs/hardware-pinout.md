@@ -82,4 +82,4 @@ The GPIO header allows many hardware interfaces:
 * [Datasheets & Schematics](resources-datasheets.md)
 
 !!! warning "Voltage Warning"
-All GPIOs use 3.3V logic. **Never connect 5V signals directly to GPIO pins.**
+    All GPIOs use 3.3V logic. **Never connect 5V signals directly to GPIO pins.**

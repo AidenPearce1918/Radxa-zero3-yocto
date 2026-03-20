@@ -44,7 +44,5 @@ This page details the technical specifications of the Radxa Zero 3W single-board
 * [Hardware Datasheets & Schematics](resources-datasheets.md)
 * [Radxa Documentation Archive](https://dl.radxa.com/zero3/docs/hw/3w/)
 
-<div class="card-ui">
-**✨ Feature Highlight:**
-Radxa Zero 3W supports both eMMC and microSD for flexible storage options!
-</div>
+!!! tip "✨ Feature Highlight"
+    Radxa Zero 3W supports both eMMC and microSD for flexible storage options!

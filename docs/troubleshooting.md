@@ -13,6 +13,7 @@ Common issues and solutions for the Radxa Zero 3W with Yocto and other Linux dis
 **Solutions:**
 
 1. **Check Power Supply**
+
    ```bash
    # Verify 5V/2A USB-C power adapter
    # Test with different power supply
@@ -240,7 +241,7 @@ bitbake -c clean core-image-minimal
 bitbake core-image-minimal
 ```
 
-### **Issue: SD card corruption (read-only filesystem)****
+### **Issue: SD card corruption (read-only filesystem)**
 
 **Symptoms:** "Read-only file system" errors
 
@@ -578,11 +579,12 @@ ip link show
 
 ### **Contact Support**
 
-1. **Radxa Forum** - https://forum.radxa.com/
-2. **GitHub Issues** - https://github.com/radxa/yocto/issues
-3. **Radxa Documentation** - https://docs.radxa.com/en/zero/zero3
+1. **Radxa Forum** - <https://forum.radxa.com/>
+2. **GitHub Issues** - <https://github.com/radxa/yocto/issues>
+3. **Radxa Documentation** - <https://docs.radxa.com/en/zero/zero3>
 
 **Always include:**
+
 - Debug report from above
 - Steps to reproduce issue
 - Expected vs actual behavior
@@ -596,4 +598,3 @@ ip link show
 - [Linux Kernel Debugging](https://www.kernel.org/doc/html/latest/admin-guide/index.html)
 - [Debian/Ubuntu Support](https://askubuntu.com/)
 - [Radxa GitHub Issues](https://github.com/radxa)
-
